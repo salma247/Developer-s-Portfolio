@@ -1,0 +1,315 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  scroll-behavior: smooth;
+}
+body {
+  background-color: black;
+  line-height: 1.5;
+  color: white;
+  font-family: "Inter", sans-serif;
+}
+h1,
+h2,
+h3 {
+  font-family: "Prata", serif;
+  font-weight: 500;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+p {
+  color: #888;
+}
+
+/** ============= NAVBAR ============= **/
+nav {
+  padding: 0 1rem;
+}
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 1rem;
+}
+.nav-header h1 {
+  font-size: 16px;
+}
+.nav-toggle {
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+}
+
+.nav-links a {
+  color: white;
+  font-size: 1rem;
+  text-transform: capitalize;
+  display: block;
+  padding: 0.5rem 1rem;
+}
+.nav-links a:hover {
+  color: rgb(246, 216, 47);
+}
+
+.nav-links {
+  height: 0;
+  overflow: hidden;
+  transition: var(--transition);
+}
+.show-links {
+  height: 10rem;
+}
+header .btn-touch {
+  display: none;
+}
+
+@media screen and (min-width: 900px) {
+  nav {
+    padding: 0 3rem;
+  }
+  header {
+    padding: 2rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-header {
+    padding: 0;
+  }
+  .nav-header h1 {
+    font-size: 24px;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .nav-links {
+    height: auto;
+    display: flex;
+    align-items: center;
+  }
+  .nav-links a {
+    padding: 0;
+    margin: 0 0.5rem;
+  }
+  .nav-links a:hover {
+    padding: 0;
+    background: transparent;
+  }
+  header .btn-touch {
+    display: block;
+    background-color: rgb(246, 216, 47);
+    color: black;
+    font-family: "Prata", serif;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+}
+@media screen and (min-width: 1100px) {
+  nav,
+  header {
+    padding: 2rem 5rem;
+  }
+}
+
+/** ============= Hero section============= **/
+.hero {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+}
+
+.hero {
+  padding-top: 2rem;
+}
+.hero h1 {
+  font-size: 2rem;
+}
+.hero p {
+  padding: 1rem 0;
+}
+@media screen and (min-width: 900px) {
+  .hero {
+    width: 60%;
+    padding: 0 3rem;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .hero {
+    width: 60%;
+    padding: 0 5rem;
+  }
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+  .hero p {
+    padding-right: 15rem;
+  }
+}
+
+/** ============= Companies section============= **/
+.companies {
+  padding: 2.5rem 1rem;
+}
+.companies ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.tinder {
+  position: relative;
+}
+
+.tinder .logo {
+  position: absolute;
+  left: -7px;
+  top: -4px;
+}
+@media screen and (min-width: 900px) {
+  .companies {
+    padding: 2.5rem 5rem;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .companies {
+    padding: 2.5rem 5rem;
+  }
+  .companies ul {
+    justify-content: space-between;
+  }
+}
+
+/** ============= Sites section ============= **/
+
+.sites {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin: 0 1rem;
+}
+
+.sites img {
+  width: 100%;
+}
+
+.sites h3 {
+  font-size: 2rem;
+  padding: 5px 0;
+}
+@media screen and (min-width: 900px) {
+  .sites {
+    flex-direction: row;
+    margin: 3rem;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .sites {
+    margin: 3rem 5rem;
+  }
+  .sites img {
+    height: 60%;
+  }
+}
+
+/** ============= Awards section ============= **/
+.awards {
+  background-color: rgb(42, 45, 58);
+  margin-top: 3rem;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.awards h2 {
+  font-size: 2rem;
+}
+.awards p {
+  margin: 20px 0;
+}
+@media screen and (min-width: 900px) {
+  .awards {
+    padding: 4rem 3rem;
+    gap: 50px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .awards {
+    flex-direction: row;
+    margin: 0;
+    padding: 4rem 5rem;
+    gap: 100px;
+  }
+  .awards p {
+    font-size: 1.2rem;
+  }
+}
+
+/** ============= interseted ============= **/
+.interested {
+  margin: 3rem 0;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.interested h2 {
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+.interested .btn-touch {
+  width: 150px;
+  background-color: rgb(246, 216, 47);
+  color: black;
+  font-family: "Prata", serif;
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 1rem 0;
+}
+@media screen and (min-width: 900px) {
+  .interested {
+    padding: 4rem 3rem;
+    width: 45%;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .interested {
+    padding: 4rem 5rem;
+  }
+}
+
+/** ============= footer ============= **/
+footer {
+  background-color: rgb(42, 45, 58);
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 1rem;
+}
+
+footer img{
+ padding: 0 3px;
+}
+@media screen and (min-width: 900px) {
+  footer {
+    padding: 1.5rem 3rem;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1100px) {
+  footer {
+    padding: 1.5rem 5rem;
+  }
+}
